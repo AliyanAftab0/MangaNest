@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Manga, SearchFilters } from "@/types";
-import { searchManga } from "@/lib/api";
+import { searchMangaAction } from "@/app/actions";
 import { MangaCard } from "@/components/features/MangaCard";
 import { Button } from "@/components/ui/button";
 import { Loader } from "@/components/ui/loader";
@@ -30,7 +30,7 @@ export function DiscoverFeed({ initialFilters = {} }: { initialFilters?: SearchF
     const fetchManga = async (reset = false) => {
         setLoading(true);
         const offset = reset ? 0 : page * 20;
-        const newManga = await searchManga(filters.title || "", {
+        const newManga = await searchMangaAction(filters.title || "", {
             ...filters,
             offset,
             limit: 20,
