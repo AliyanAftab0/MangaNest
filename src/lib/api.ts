@@ -27,7 +27,7 @@ const fetchFromApi = async (endpoint: string, params: Record<string, any> = {}) 
         const response = await fetch(url.toString(), {
             next: { revalidate: 3600 }, // Cache for 1 hour
             headers: {
-                'User-Agent': 'MangaReader/1.0.0',
+                'User-Agent': 'MangaNest/1.0.0 (https://manga-nest-phi.vercel.app)',
             }
         });
 
@@ -120,7 +120,7 @@ export const getChapterImages = async (chapterId: string): Promise<string[]> => 
         const response = await fetch(`${BASE_URL}/at-home/server/${chapterId}`, {
             cache: 'no-store',
             headers: {
-                'User-Agent': 'MangaReader/1.0.0',
+                'User-Agent': 'MangaNest/1.0.0 (https://manga-reader.vercel.app)',
             }
         });
 
