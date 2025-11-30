@@ -15,21 +15,21 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://manga-reader.vercel.app",
-    siteName: "MangaReader",
+    url: "https://manga-nest-phi.vercel.app",
+    siteName: "MangaNest",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "MangaReader",
+        alt: "MangaNest",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    site: "@mangareader",
-    creator: "@mangareader",
+    site: "@manganest",
+    creator: "@manganest",
   },
 };
 
